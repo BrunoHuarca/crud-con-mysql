@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Agregar Dato
+  body
+    h1 Agregar Dato
+    form(action="/agregar" method="POST")
+      if error
+        p.error= error
+      label(for="nuevoDato") Nuevo Dato:
+      input(type="text" name="nuevoDato" placeholder="Ingrese un nuevo dato")
+      button(type="submit") Agregar
+    a(href="/") Volver a la lista
